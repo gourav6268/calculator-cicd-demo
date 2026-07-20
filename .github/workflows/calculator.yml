@@ -1,17 +1,20 @@
 name: Calculator CI
+
 on:
   push:
     branches:
-        - main
+      - main
+        
 jobs:
   build:
-  runs-on: ubuntu-latest
-  steps:
-    - name: Checkout Repository
-    uses: actions/checkout@v4
+    runs-on: ubuntu-latest
     
-      - name: Verify Python
-    run: python --version
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v4
+    
+    - name: Verify Python
+      run: python --version
     
     - name: Run Calculator Program
-    run: python Calculator.py
+      run: python Calculator.py
